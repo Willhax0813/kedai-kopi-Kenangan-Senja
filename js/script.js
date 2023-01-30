@@ -13,3 +13,22 @@ document.addEventListener("click", function(e) {
         navbarNav.classList.remove("active");
     }
 });
+
+// search bar active
+const navbarExtra = document.querySelector("input");
+// ketika search bar diklik
+document.querySelector("#search").onclick = () => {
+    navbarExtra.classList.toggle("active");
+};
+
+// menutup search bar
+const search = document.querySelector("#search");
+
+// klik diluar area search bar
+document.addEventListener("click", function(e) {
+    if (!search.contains(e.target) && !navbarExtra.contains(e.target)) {
+        navbarExtra.classList.remove("active");
+    }
+});
+
+// mengaplikasikan fungsi enter

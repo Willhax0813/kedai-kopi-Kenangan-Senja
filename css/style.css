@@ -22,6 +22,9 @@ body {
     color: #fff;
 }
 
+
+/* navbar section */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -71,6 +74,10 @@ body {
     transform: scaleX(0.5);
 }
 
+.navbar .navbar-extra {
+    display: flex;
+}
+
 .navbar .navbar-extra a {
     color: #fff;
     margin: 0 0.5rem;
@@ -79,6 +86,83 @@ body {
 .navbar .navbar-extra a:hover {
     color: var(--primary);
 }
+
+.navbar .navbar-extra .search-box {
+    position: relative;
+}
+
+.navbar .navbar-extra .search-box input {
+    border: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+    transition: width 0.4s ease;
+}
+
+
+/* .navbar .navbar-extra .search-box input::after { */
+
+
+/* content: ""; */
+
+
+/* display: block; */
+
+
+/* padding-bottom: 0.5rem; */
+
+
+/* border-bottom: 0.1rem solid var(--primary); */
+
+
+/* } */
+
+.navbar .navbar-extra a.active {
+    transition: 0.4s;
+}
+
+.navbar .navbar-extra .search-box input.active {
+    width: 20rem;
+    height: 2rem;
+    padding: 1.2rem 2rem;
+    transition: width 0.5s ease;
+    color: #fff;
+    background-color: var(--bg);
+    font-weight: 300;
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    border-bottom: 0.1rem solid var(--primary);
+}
+
+
+/* .navbar .navbar-extra .search-box input:focus { */
+
+
+/* color: #fff; */
+
+
+/* } */
+
+
+/* .navbar .navbar-extra .icon-search i { */
+
+
+/* position: absolute; */
+
+
+/* top: 30%; */
+
+
+/* left: 30px; */
+
+
+/* transform: translate(-30%, -30%); */
+
+
+/* cursor: pointer; */
+
+
+/* } */
 
 #hamburger-menu {
     display: none;
@@ -415,5 +499,8 @@ footer .credit a {
 @media (max-width: 450px) {
     html {
         font-size: 55%;
+    }
+    .navbar .navbar-extra input {
+        font-weight: 700;
     }
 }
