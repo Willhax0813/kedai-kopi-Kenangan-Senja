@@ -15,19 +15,25 @@ document.addEventListener("click", function(e) {
 });
 
 // search bar active
-const navbarExtra = document.querySelector("input");
+
+const searchBtn = document.querySelector(".search-btn");
+const searchBox = document.querySelector(".search-box");
 // ketika search bar diklik
-document.querySelector("#search").onclick = () => {
-    navbarExtra.classList.toggle("active");
+document.querySelector(".search-btn").onclick = () => {
+    searchBox.classList.toggle("active");
 };
 
+const searchInput = document.querySelector("input");
+document.querySelector("input").onclick = () => {
+    searchInput.classList.toggle("active");
+};
 // menutup search bar
-const search = document.querySelector("#search");
+const navbarExtra = document.querySelector(".navbar-extra");
 
 // klik diluar area search bar
 document.addEventListener("click", function(e) {
-    if (!search.contains(e.target) && !navbarExtra.contains(e.target)) {
-        navbarExtra.classList.remove("active");
+    if (!searchBtn.contains(e.target) && !navbarExtra.contains(e.target)) {
+        searchBox.classList.remove("active");
     }
 });
 
