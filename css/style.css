@@ -525,6 +525,6 @@ footer .credit a {
         font-size: 55%;
     }
     .search-box input[type="text"].active {
-        width: 3rem;
+        width: 35%;
     }
 }
